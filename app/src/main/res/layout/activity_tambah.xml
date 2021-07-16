@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.TambahActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kegiatan Hari Ini"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:gravity="center"/>
+        </FrameLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Judul Kegiatan"
+                        android:textColor="@color/black"/>
+                    <EditText
+                        android:id="@+id/judulkegiatan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Judul Kegiatan"
+                        android:gravity="center"
+                        android:background="@drawable/rounder_edittext_background"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:inputType="textPersonName"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Keterangan Kegiatan"
+                        android:textColor="@color/black"/>
+                    <EditText
+                        android:id="@+id/keterangankegiatan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Keterangan Kegiatan"
+                        android:gravity="center"
+                        android:background="@drawable/rounder_edittext_background"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:inputType="textPersonName"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Waktu Kegiatan"
+                        android:textColor="@color/black"/>
+                    <EditText
+                        android:id="@+id/waktukegiatan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Waktu Kegiatan"
+                        android:gravity="center"
+                        android:background="@drawable/rounder_edittext_background"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:inputType="textPersonName"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tanggal Kegiatan"
+                        android:textColor="@color/black"/>
+                    <EditText
+                        android:id="@+id/tanggalkegiatan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Tanggal Kegiatan"
+                        android:gravity="center"
+                        android:background="@drawable/rounder_edittext_background"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:inputType="textPersonName"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lokasi Kegiatan"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:id="@+id/lokasikegiatan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Lokasi Kegiatan"
+                        android:gravity="center"
+                        android:background="@drawable/rounder_edittext_background"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:inputType="textPersonName"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp">
+                    <Button
+                        android:id="@+id/tambahbutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tambah Kegiatan"
+                        android:textSize="15dp"
+                        android:textAllCaps="false"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/teal_200"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
