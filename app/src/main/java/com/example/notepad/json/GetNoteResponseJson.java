@@ -9,7 +9,7 @@ import java.util.List;
 
 public class GetNoteResponseJson {
     @Expose
-    @SerializedName("catatan")
+    @SerializedName("kegiatan")
     private List<NoteModel> data = new ArrayList<>();
 
     public List<NoteModel> getData() {

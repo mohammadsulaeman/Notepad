@@ -10,7 +10,7 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface NoteService {
-    @GET("catatanapi/catatandata")
+    @GET("catatanapi/kegiatandata")
     Call<GetNoteResponseJson> getNoted();
 
     @POST("catatanapi/register")

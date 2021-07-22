@@ -39,7 +39,6 @@ public class NoteItem extends RecyclerView.Adapter<NoteItem.ItemRowHolder>
     @Override
     public void onBindViewHolder(@NonNull @NotNull NoteItem.ItemRowHolder holder, int position) {
         final NoteModel singleItem = datalist.get(position);
-        holder.nama.setText(singleItem.getJudul());
         holder.keterangankeg.setText(singleItem.getKeterangan());
         holder.tanggalkeg.setText(singleItem.getTanggal());
         holder.waktukeg.setText(singleItem.getWaktu());
@@ -53,11 +52,10 @@ public class NoteItem extends RecyclerView.Adapter<NoteItem.ItemRowHolder>
 
     static class ItemRowHolder extends RecyclerView.ViewHolder{
 
-        TextView nama,keterangankeg,waktukeg,tanggalkeg,lokasikeg;
+        TextView keterangankeg,waktukeg,tanggalkeg,lokasikeg;
         public ItemRowHolder(@NonNull @NotNull View itemView) {
             super(itemView);
 
-            nama = itemView.findViewById(R.id.jenis);
             keterangankeg = itemView.findViewById(R.id.keterangan);
             waktukeg = itemView.findViewById(R.id.waktu);
             tanggalkeg = itemView.findViewById(R.id.tanggal);

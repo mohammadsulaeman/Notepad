@@ -40,8 +40,8 @@ import retrofit2.Response;
 
 public class TambahActivity extends AppCompatActivity {
 
-    EditText judul,keterangan,waktu,tanggal;
-    TextView lokasi;
+    EditText keterangan;
+    TextView lokasi,waktu,tanggal;
     Button simpan;
     String latitude, longitude,saveTime,saveDate;
     private final int DESTINATION_ID = 1;
@@ -62,7 +62,6 @@ public class TambahActivity extends AppCompatActivity {
             manager.createNotificationChannel(channel);
         }
 
-        judul = findViewById(R.id.judulkegiatan);
         keterangan = findViewById(R.id.keterangankegiatan);
         lokasi = findViewById(R.id.lokasikegiatan);
         waktu = findViewById(R.id.waktukegiatan);
@@ -92,9 +91,7 @@ public class TambahActivity extends AppCompatActivity {
         simpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (TextUtils.isEmpty(judul.getText().toString())){
-                    Toast.makeText(TambahActivity.this, "judul kegiatan tidak boleh kosong", Toast.LENGTH_SHORT).show();
-                }else  if (TextUtils.isEmpty(keterangan.getText().toString())){
+                 if (TextUtils.isEmpty(keterangan.getText().toString())){
                     Toast.makeText(TambahActivity.this, "keterangan kegiatan tidak boleh kosong", Toast.LENGTH_SHORT).show();
                 }else  if (TextUtils.isEmpty(waktu.getText().toString())){
                     Toast.makeText(TambahActivity.this, "waktu kegiatan tidak boleh kosong", Toast.LENGTH_SHORT).show();
@@ -181,13 +178,12 @@ public class TambahActivity extends AppCompatActivity {
 
     private void onSignInClick() {
         NotedRequestJson request = new NotedRequestJson();
-        request.setJudul(judul.getText().toString());
         request.setKeterangan(keterangan.getText().toString());
         request.setWaktu(waktu.getText().toString());
         request.setTanggal(tanggal.getText().toString());
         request.setLokasi(lokasi.getText().toString());
 
-        NoteService service = ServiceGenerator.createService(NoteService.class,request.getJudul(),request.getKeterangan());
+        NoteService service = ServiceGenerator.createService(NoteService.class,request.getWaktu(),request.getKeterangan());
         service.tambah(request).enqueue(new Callback<NotedResponseJson>() {
             @Override
             public void onResponse(Call<NotedResponseJson> call, Response<NotedResponseJson> response) {

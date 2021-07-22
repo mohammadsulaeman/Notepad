@@ -4,33 +4,22 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class NotedRequestJson {
-    @SerializedName("catatan_nama")
-    @Expose
-    private String judul;
 
-    @SerializedName("catatan_keterangan")
+    @SerializedName("kegiatan_keterangan")
     @Expose
     private String keterangan;
 
-    @SerializedName("catatan_tanggal")
+    @SerializedName("kegiatan_tanggal")
     @Expose
     private String tanggal;
 
-    @SerializedName("catatan_waktu")
+    @SerializedName("kegiatan_waktu")
     @Expose
     private String waktu;
 
-    @SerializedName("catatan_lokasi")
+    @SerializedName("kegiatan_lokasi")
     @Expose
     private String lokasi;
-
-    public String getJudul() {
-        return judul;
-    }
-
-    public void setJudul(String judul) {
-        this.judul = judul;
-    }
 
     public String getKeterangan() {
         return keterangan;
